@@ -1,0 +1,15 @@
+Q1: 캘리포니아 집값
+Q2: 타이타닉 생존자
+Q3: 하이브 음악: 2000년대 빌보드 차트
+
+Q1: 두나무 -> 코인이 있을때 안전자산 추천 -> 수익률 높도록
+Q1: 신문TV + 뉴미디어 -> ㅁ낳은 사람이 봤으면 좋겠어
+
+finance data reader
+
+https://github.com/FinanceData/FinanceDataReader
+
+pip install finance-datareader
+
+pip install seaborn
+
