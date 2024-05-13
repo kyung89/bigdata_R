@@ -45,7 +45,7 @@ def lt_nb(text):
     review = text.replace("[^ㄱ-ㅎㅏ-ㅣ가-힣]", "")
     morphs = okt.morphs(review, stem=True) # 토큰 분리
     test = " ".join(morph for morph in morphs if not morph in stopwords)
-    test_dtm = dtm_vector.transform(test)
+    test_dtm = dtm_vector.transform([test])
     return test_dtm
 
 @app.route("/")
