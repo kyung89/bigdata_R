@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block sub_title %}감성 분석 - <small>네이버 영화평 긍정/부정 평가?</small>{% endblock %}
+{% block main %}
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-8">
+        <form action="/senti" method="POST">
+            <table class="table table-borderless">
+                <tr>
+                    <td>영화 감상평</td>
+                    <td><textarea class="form-control" rows="5" name="review"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit" class="btn btn-primary">실행</button>&nbsp;&nbsp;
+                        <button type="reset" class="btn btn-secondary">취소</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>
+{% endblock %}

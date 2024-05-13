@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI with Flask</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.ico')}}">
+    <script src="{{url_for('static', filename='js/jquery-3.5.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul class="nav nav-pills mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link {% if menu.home %}active{% endif %}" href="/">
+                        <i class="fa fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 20px">
+            <div class="col-2">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link {% if menu.senti %}active{% endif %}"
+                            href="{% if menu.senti %}#{% else %}/senti{% endif %}">감성분석</a></li>
+                </ul>
+            </div>
+            <div class="col-10">
+                <h3>{% block sub_title %}서브 타이틀{% endblock %}</h3>
+                <hr>
+                {% block main %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center fixed-bottom">
+            <span class="navbar-text">
+                Copyright &copy; 2024 -sd-
+            </span>
+        </nav>
+    </div>
+    {% block addition %}
+    {% endblock %}
+
+</body>
+
+</html>

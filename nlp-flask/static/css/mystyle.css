@@ -1,0 +1,5 @@
+/* .jumbotron {
+    background-image: url_for('static', filename='/images/ai.jpg');
+    background-image: url('../static/images/ai.jpg');
+	background-size: cover;
+	height: 100%; } */

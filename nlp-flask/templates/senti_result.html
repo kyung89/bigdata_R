@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block sub_title %}감성 분석 - <small>결과</small>{% endblock %}
+{% block main %}
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-8">
+        <table class="table">
+            <tr class="d-flex">
+                <td class="col-4">영화 감상평</td>
+                <td class="col-8">{{movie.review}}</td>
+            </tr>
+            <tr class="d-flex" style="background:#ffeeba;">
+                <td class="col-4"><strong>Logistic Regression</strong></td>
+                <td class="col-8" style="text-align: center;"><strong>{{movie.lr}}</strong></td>
+            </tr>
+            <tr class="d-flex" style="background:#ffeeba;">
+                <td class="col-4"><strong>Naive Bayes</strong></td>
+                <td class="col-8" style="text-align: center;"><strong>{{movie.nb}}</strong></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button class="btn btn-primary" onclick="location.href='/senti'">재실행</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-3"></div>
+</div>
+{% endblock %}
